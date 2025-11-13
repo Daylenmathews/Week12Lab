@@ -13,10 +13,11 @@ output reg out
  if (count == 3'd5) begin
   count <= 3'b000;
   out <= ~out;
-  end
+ end 
   else begin
-  count <= count + 1'b1;
+  count <= count + 1;
   end
   end
   end
 endmodule
+
