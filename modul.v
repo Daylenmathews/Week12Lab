@@ -6,18 +6,17 @@ output reg out
     );
  always@(posedge clk or posedge reset) begin
  if(reset)begin
- count <= b'000;
+ count <= 3'b000;
  out <= 1'b0;
  end
  else begin 
  if (count == 3'd5) begin
-  count <= b'000;
+  count <= 3'b000;
   out <= ~out;
   end
   else begin
-  count <= count + 1;
+  count <= count + 1'b1;
   end
   end
   end
 endmodule
-
